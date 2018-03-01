@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get '/owners', to: 'owners#index', as: 'owners'
   get '/signup', to: 'owners#new', as: 'new_owner'
-  #post '/owners'. to: 'owners#create'
-  #get '/:id', to: 'owners#show', as: 'owner'
+  post '/owners'. to: 'owners#create'
+  get '/:id', to: 'owners#show', as: 'owner'
 
 end
