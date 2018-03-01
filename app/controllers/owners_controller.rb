@@ -10,6 +10,7 @@ class OwnersController < ApplicationController
   def create
     @owner = Owner.create(owner_params)
     if @owner.save
+      login(@owner)
       redirect_to @owner
     else
       redirect_to home_path
