@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
   end
 
   def create
+    # owner_params = params.require(:user).permit(:email, :password)
     @owner = Owner.confirm(owner_params)
     if @owner
       login(@owner)
@@ -12,6 +13,11 @@ class SessionsController < ApplicationController
     else
       redirect_to new_owner_path
     end
+  end
+
+  def destroy
+    logout
+    redirect_to owners_path
   end
 
   private
