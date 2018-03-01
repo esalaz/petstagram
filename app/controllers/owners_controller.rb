@@ -18,7 +18,11 @@ class OwnersController < ApplicationController
   end
 
   def show
-    @owner = Owner.find(params[:id])
+    if current_owner == Owner.find(params[:id])
+      @owner = Owner.find(params[:id])
+    else
+      redirect_to new_session_path
+    end
   end
 
   private
