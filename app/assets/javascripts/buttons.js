@@ -9,6 +9,7 @@ $(function() {
   buttonclick(".loginbuttonclick", "/login");
   buttonclick(".signupbuttonclick", "/signup");
   buttonclick(".feedbuttonclick", "/posts");
-
+  buttonclick(".newpetbutton", "/pets/new");
+  buttonclick(".newpostbutton", "/posts/new");
 
 });

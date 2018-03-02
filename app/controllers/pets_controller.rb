@@ -9,11 +9,7 @@ class PetsController < ApplicationController
 
   def create
     @pet = Pet.create(pet_params)
-    if @pet.save
-      redirect_to @pet
-    else
-      redirect_to owner_path
-    end
+    redirect_to current_owner
   end
 
   def show

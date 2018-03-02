@@ -1,6 +1,8 @@
-<% @posts.each do |post| %>
-<div class="feedposts">
-  <%= image_tag(post.image_url.to_s) %>
-  <%= post.comment %>
+<div class="feedpage">
+  <% @posts.each do |post| %>
+    <div class="feedposts">
+      <%= image_tag(post.image_url.to_s) %>
+      <%= post.comment %>
+    </div>
+  <% end %>
 </div>
-<% end %>

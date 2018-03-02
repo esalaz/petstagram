@@ -1,8 +1,17 @@
-<%= link_to "logout", logout_path %>
+<%= button_to "logout", logout_path %>
+<div class="profilebuttonsright">
+  <button class="feedbuttonclick">Go To Feed</button>
+  <button class="newpetbutton">Add New Pet</button>
+  <button class="newpostbutton">Post A Pic</button>
+</div>
 
 <h1><%= @owner.name %>'s Profile!</h1>
-
-<% @pets.each do |pet| %>
-  <%=pet.name%>
-  <%= image_tag(pet.image_url.to_s)%>
-<%end%>
+<h2>Your Pets</h2>
+<div class="allownerpets"
+  <% @pets.each do |pet| %>
+    <div class="ownerpet"
+      <%=pet.name%>
+      <%= image_tag(pet.image_url.to_s)%>
+  </div>
+  <%end%>
+</div>
