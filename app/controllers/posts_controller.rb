@@ -13,7 +13,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.create(post_params)
     if @post.save
-      redirect_to @post
+      redirect_to feed_path
     else
       redirect_to home_path
     end

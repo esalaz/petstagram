@@ -1,3 +1,4 @@
+<div class="smallpagetitle pagetitle"><%=image_tag("/assets/images/petstagram.png") %></div>
 <h1>Login</h1>
 <%=form_with model: @owner, url: "/sessions" do |form| %>
   <%= form.email_field :email, placeholder: "email"%>

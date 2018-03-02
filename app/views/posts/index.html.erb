@@ -1,13 +1,14 @@
-<%if current_owner = nil%>
-  <%= button_to "login", "/login" %>
+<%if current_owner == nil %>
+  <button class="loginbuttonclick">Login</button>
+  <button class="signupbuttonclick">Signup</button>
 <%else%>
-  <%= button_to "my profile", current_owner %>
+  <button><%= link_to "profile", current_owner %></button>
 <% end <%>
 
-<div class="smallpagetitle"><%=image_tag("/assets/images/petstagram.png") %></div>
+<div class="smallpagetitle pagetitle"><%=image_tag("/assets/images/petstagram.png") %></div>
 
 <div class="feedpage">
-  <% @posts.each do |post| %>
+  <% @posts.reverse.each do |post| %>
     <div class="feedposts">
       <%= image_tag(post.image_url.to_s) %>
       <%= post.comment %>

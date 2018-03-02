@@ -11,5 +11,7 @@ $(function() {
   buttonclick(".feedbuttonclick", "/posts");
   buttonclick(".newpetbutton", "/pets/new");
   buttonclick(".newpostbutton", "/posts/new");
+  buttonclick(".feedprofilebutton", "/posts/new");
+  buttonclick(".pagetitle", "/");
 
 });

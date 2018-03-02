@@ -14,9 +14,14 @@ body {
   margin: 0 auto;
 }
 
-.landingpagetitle img {
+.landingpagetitle img, .smallpagetitle img {
   width: 100%;
   margin-top: 3em;
+}
+
+.smallpagetitle {
+  width: 20%;
+  margin: 0 auto;
 }
 
 h2 {
