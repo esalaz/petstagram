@@ -6,11 +6,9 @@ $(function() {
     });
   }
 
-  buttonclick(".loginbuttonclick", "/users/login");
-  buttonclick(".signupbuttonclick", "/users/new");
-  buttonclick(".feedbuttonclick", "/users/feed");
+  buttonclick(".loginbuttonclick", "/login");
+  buttonclick(".signupbuttonclick", "/signup");
+  buttonclick(".feedbuttonclick", "/owners/feed");
 
 
 });
-
-
