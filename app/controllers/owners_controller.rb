@@ -18,7 +18,7 @@ class OwnersController < ApplicationController
   end
 
   def show
-    @pets = Pet.where(params[:owner_id])
+    @pets = Pet.where(params[:owner_id = Owner.find(params[:id]) ])
     if current_owner == Owner.find(params[:id])
       @owner = Owner.find(params[:id])
     else
