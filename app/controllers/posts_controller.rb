@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    pets = Pet.where(params[:owner_id])
+    pets = Pet.where(params[owner_id: current_owner.id])
     @pet_selector = pets.each.map { |pet|[pet.name, pet.id] }
   end
 
