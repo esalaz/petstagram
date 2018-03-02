@@ -10,6 +10,7 @@ class OwnersController < ApplicationController
   def create
     @owner = Owner.create(owner_params)
     if @owner.save
+      login(@owner)
       redirect_to @owner
     else
       redirect_to home_path
@@ -17,7 +18,12 @@ class OwnersController < ApplicationController
   end
 
   def show
-    @owner = Owner.find(params[:id])
+    @pets = Pet.where(params[:owner_id])
+    if current_owner == Owner.find(params[:id])
+      @owner = Owner.find(params[:id])
+    else
+      redirect_to new_session_path
+    end
   end
 
   private

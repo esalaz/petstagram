@@ -1,0 +1,14 @@
+<div class="smallpagetitle"><%=image_tag("/assets/images/petstagram.png") %></div>
+<h1>Create A Profile</h1>
+<div id="newusersignupform">
+  <%= form_with model: @pet do |form| %>
+    <%= form.text_field :name, placeholder: "pet's name" %> <br>
+    <%= form.file_field :image, placeholder: "image"  %> <br>
+    <%= form.hidden_field :image_cache %>
+    <%= form.text_field :species, placeholder: 'type' %> <br>
+    <%= form.text_field :breed, placeholder: 'breed' %> <br>
+    <%= form.text_field :favorite_thing, placeholder: "favorite thing" %> <br>
+    <%= form.hidden_field :owner_id, value: current_owner.id %>
+    <%= form.submit %>
+  <% end %>
+</div>

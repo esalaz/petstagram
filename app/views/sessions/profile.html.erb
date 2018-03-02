@@ -1,0 +1,8 @@
+<div>
+  <%= @pet.name%>
+  <%= image_tag(@pet.image_url.to_s)%>
+</div>
+
+<%= link_to "logout", logout_path %>
+
+<h1><%= @owner.name %>'s Profile!</h1>

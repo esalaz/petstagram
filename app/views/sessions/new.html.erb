@@ -1,0 +1,6 @@
+<h1>Login</h1>
+<%=form_with model: @owner, url: "/sessions" do |form| %>
+  <%= form.email_field :email, placeholder: "email"%>
+  <%= form.password_field :password, placeholder: "password"%>
+  <%= form.submit "login" %>
+<%end%>
