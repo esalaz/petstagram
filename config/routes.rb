@@ -6,10 +6,11 @@ Rails.application.routes.draw do
   get '/signup', to: 'owners#new', as: 'new_owner'
   post '/owners', to: 'owners#create'
   get '/owners/:id', to: 'owners#show', as: 'owner'
+  post '/owners/:id', to: 'owners#show'
 
   get '/login', to: 'sessions#new', as: 'new_session'
   post '/sessions', to: 'sessions#create', as: 'sessions'
-  get '/logout', to: 'sessions#destroy'
+  post '/logout', to: 'sessions#destroy'
 
   get '/pets', to: 'pets#index', as: 'pets'
   get '/pets/new', to: 'pets#new', as: 'new_pet'

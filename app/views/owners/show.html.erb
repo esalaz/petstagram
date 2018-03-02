@@ -7,9 +7,9 @@
 
 <h1><%= @owner.name %>'s Profile!</h1>
 <h2>Your Pets</h2>
-<div class="allownerpets"
+<div class="allownerrpets"
   <% @pets.each do |pet| %>
-    <div class="ownerpet"
+    <div class="ownerpet">
       <%=pet.name%>
       <%= image_tag(pet.image_url.to_s)%>
   </div>

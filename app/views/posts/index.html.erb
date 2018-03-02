@@ -1,3 +1,11 @@
+<%if current_owner = nil%>
+  <%= button_to "login", "/login" %>
+<%else%>
+  <%= button_to "my profile", current_owner %>
+<% end <%>
+
+<div class="smallpagetitle"><%=image_tag("/assets/images/petstagram.png") %></div>
+
 <div class="feedpage">
   <% @posts.each do |post| %>
     <div class="feedposts">
