@@ -6,7 +6,7 @@ module SessionsHelper
   end
 
   def current_owner
-    @current_owner ||=Owner.find_by_id(session[:owner_id])
+    @current_owner ||= Owner.find_by_id(session[:owner_id])
   end
 
   def logged_in?
@@ -18,5 +18,5 @@ module SessionsHelper
   def logout
     @current_owner = session[:owner_id] = nil
   end
-  
+
 end

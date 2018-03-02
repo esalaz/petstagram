@@ -6,6 +6,7 @@
     <%= form.file_field :image, placeholder: "image"  %> <br>
     <%= form.hidden_field :image_cache %>
     <%= form.text_field :species, placeholder: 'type' %> <br>
+    <%= form.select :species, ['dog', 'cat', 'bird', 'reptile', 'other']%> <br>
     <%= form.text_field :breed, placeholder: 'breed' %> <br>
     <%= form.text_field :favorite_thing, placeholder: "favorite thing" %> <br>
     <%= form.hidden_field :owner_id, value: current_owner.id %>
