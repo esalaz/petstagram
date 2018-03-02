@@ -1,15 +1,13 @@
 class PostsController < ApplicationController
 
   def index
+    @posts = Post.all
   end
 
   def new
     @post = Post.new
     pets = Pet.where(params[:owner_id])
-    @pet_selector = []
-    pets.each do |pet|
-      @pet_selector.push(pet.name)
-    end
+    @pet_selector = pets.each.map { |pet|[pet.name, pet.id] }
   end
 
   def create

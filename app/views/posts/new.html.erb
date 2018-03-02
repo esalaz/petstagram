@@ -1,10 +1,11 @@
 <h1>Share A Pic</h1>
 <div id="newpostform">
   <%= form_with model: @post do |form| %>
-    <%= form.file_field :image, placeholder: "image"  %> <br>
+    <%= form.file_field :image, placeholder: "image" %> <br>
     <%= form.hidden_field :image_cache %>
     <%= form.text_field :comment, placeholder: 'comment' %> <br>
     <%= form.select :pet_id, @pet_selector %> <br>
+
     <%= form.submit %>
   <% end %>
 </div>
