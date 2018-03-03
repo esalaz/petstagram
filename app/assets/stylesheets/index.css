@@ -55,10 +55,6 @@ button, .rubybuttons {
   float: right;
 }
 
-.rubybuttons {
-  float: left;
-}
-
 .landingpagemainbutton {
   margin: 1.5em 0 1.5em 3em;
 }
@@ -103,6 +99,7 @@ button, .rubybuttons {
 
 .profileheader .rubybuttons {
   width: 8em;
+  float: left;
 }
 
 .profileheader {
@@ -132,4 +129,20 @@ button, .rubybuttons {
 .ownerpet img {
   width: 100%;
   border-radius: 10em;
+}
+
+.feedheader {
+  height: 15em;
+}
+
+p {
+  font-size: 1.5em;
+  text-align: center;
+  padding-top: .3em
+}
+
+.feedbutton {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: black;
 }
