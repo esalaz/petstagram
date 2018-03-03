@@ -121,9 +121,14 @@ button, .rubybuttons {
   margin: .5em;
 }
 
+.allownerpets {
+  text-align: center;
+}
+
 .ownerpet {
   width: 20em;
-  margin: 0 auto;
+  display: inline-block;
+  padding: 1em;
 }
 
 .ownerpet img {
