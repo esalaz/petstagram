@@ -1,8 +1,21 @@
-<%= link_to "logout", logout_path %>
+<div class="profileheader">
+  <%= button_to "logout", logout_path, class: :rubybuttons %>
+  <div class="profiletitles">
+    <div class="smallpagetitle pagetitle"><%=image_tag("/assets/images/petstagram.png") %></div>
+    <h2>Your Pets</h2>
+  </div>
+  <div class="profilebuttonsright">
+    <button class="feedbuttonclick">Go To Feed</button>
+    <button class="newpetbutton">Add New Pet</button>
+    <button class="newpostbutton">Post A Pic</button>
+  </div>
+</div>
 
-<h1><%= @owner.name %>'s Profile!</h1>
-
-<% @pets.each do |pet| %>
-  <%=pet.name%>
-  <%= image_tag(pet.image_url.to_s)%>
-<%end%>
+<div class="allownerpets">
+  <% @pets.each do |pet| %>
+    <div class="ownerpet">
+      <%= image_tag(pet.image_url.to_s)%>
+      <h2><%=pet.name%></h2>
+  </div>
+  <%end%>
+</div>

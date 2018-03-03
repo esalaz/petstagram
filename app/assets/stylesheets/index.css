@@ -14,14 +14,20 @@ body {
   margin: 0 auto;
 }
 
-.landingpagetitle img {
+.landingpagetitle img, .smallpagetitle img {
   width: 100%;
   margin-top: 3em;
+}
+
+.smallpagetitle {
+  width: 18em;
+  margin: 0 auto;
 }
 
 h2 {
   font-size: 2em;
   text-align: center;
+  padding: 1em;
 }
 
 #landingpagemain {
@@ -40,7 +46,7 @@ div.landingpage {
   flex-direction: column;
 }
 
-button {
+button, .rubybuttons {
   margin: 1em;
   padding: 1em 2em;
   border: none;
@@ -53,4 +59,90 @@ button {
   margin: 1.5em 0 1.5em 3em;
 }
 
+.allforms {
+  text-align: center;
+}
 
+.allforms h1 {
+  font-size: 3em;
+  padding: 2em 0 1em;
+}
+
+.forminput, .formsubmit, .formselect {
+  background-color: white;
+  padding: .6em 1em;
+  border: none;
+  font-size: 1.7em;
+  margin: .5em;
+  width: 20em;
+  border-radius: .2em;
+}
+
+.formsubmit {
+  margin: 1em;
+  padding: 1em 2em;
+  border: none;
+  font-size: 2em;
+  border-radius: 2em;
+  width: 7em;
+}
+
+.formselect {
+  height: 2.3em;
+  width: 22em;
+}
+
+.profilebuttonsright {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileheader .rubybuttons {
+  width: 8em;
+  float: left;
+}
+
+.profileheader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profiletitles {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileheader h2 {
+  font-size: 5em;
+  padding-top: 2em;
+}
+
+.profilebuttonsright button {
+  margin: .5em;
+}
+
+.ownerpet {
+  width: 20em;
+  margin: 0 auto;
+}
+
+.ownerpet img {
+  width: 100%;
+  border-radius: 10em;
+}
+
+.feedheader {
+  height: 15em;
+}
+
+p {
+  font-size: 1.5em;
+  text-align: center;
+  padding-top: .3em
+}
+
+.feedbutton {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: black;
+}

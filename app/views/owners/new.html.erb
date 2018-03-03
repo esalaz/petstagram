@@ -1,10 +1,10 @@
-<div class="smallpagetitle"><%=image_tag("/assets/images/petstagram.png") %></div>
-<h1>Create A Profile</h1>
-<div id="newusersignupform">
+<div class="smallpagetitle pagetitle"><%=image_tag("/assets/images/petstagram.png") %></div>
+<div class="allforms">
+  <h1>Create A Profile</h1>
   <%= form_with model: @owner do |form| %>
-    <%= form.text_field :name, placeholder: 'your name' %> <br>
-    <%= form.email_field :email, placeholder: 'email' %> <br>
-    <%= form.password_field :password, placeholder: 'password' %> <br>
-    <%= form.submit %>
+    <%= form.text_field :name, placeholder: 'your name',class: :forminput %> <br>
+    <%= form.email_field :email, placeholder: 'email', class: :forminput %> <br>
+    <%= form.password_field :password, placeholder: 'password', class: :forminput %> <br>
+    <%= form.submit "sign up", class: :formsubmit %>
   <% end %>
 </div>

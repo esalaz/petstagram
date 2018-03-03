@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   get '/login', to: 'sessions#new', as: 'new_session'
   post '/sessions', to: 'sessions#create', as: 'sessions'
-  get '/logout', to: 'sessions#destroy'
+  post '/logout', to: 'sessions#destroy'
 
   get '/pets', to: 'pets#index', as: 'pets'
   get '/pets/new', to: 'pets#new', as: 'new_pet'

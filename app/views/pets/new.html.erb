@@ -1,14 +1,14 @@
-<div class="smallpagetitle"><%=image_tag("/assets/images/petstagram.png") %></div>
-<h1>Create A Profile</h1>
-<div id="newusersignupform">
+<div class="smallpagetitle pagetitle"><%=image_tag("/assets/images/petstagram.png") %></div>
+<div class="allforms">
+<h1>Add A Pet</h1>
   <%= form_with model: @pet do |form| %>
-    <%= form.text_field :name, placeholder: "pet's name" %> <br>
-    <%= form.file_field :image, placeholder: "image"  %> <br>
+    <%= form.file_field :image, class: :forminput  %> <br>
     <%= form.hidden_field :image_cache %>
-    <%= form.select :species, ['dog', 'cat', 'other']%> <br>
-    <%= form.text_field :breed, placeholder: 'breed' %> <br>
-    <%= form.text_field :favorite_thing, placeholder: "favorite thing" %> <br>
+    <%= form.text_field :name, placeholder: "pet's name", class: :forminput %> <br>
+    <%= form.select :species, ['dog', 'cat', 'other'], {}, class: :formselect %> <br>
+    <%= form.text_field :breed, placeholder: 'breed', class: :forminput %> <br>
+    <%= form.text_field :favorite_thing, placeholder: "favorite thing", class: :forminput %> <br>
     <%= form.hidden_field :owner_id, value: current_owner.id %>
-    <%= form.submit %>
+    <%= form.submit "add pet", class: :formsubmit %>
   <% end %>
 </div>
