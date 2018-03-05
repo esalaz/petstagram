@@ -11,7 +11,6 @@
     </div>
   </div>
   <div class="profilebuttonsright">
-    <%=button_to "delete all posts for pet", @post, method: :delete, class: :linkbutton %>
     <%=button_to "delete pet", @pet, method: :delete, class: :weirdbutton %>
     <%=link_to "edit pet", edit_pet_path, class: :linkbutton %>
     <%=link_to "return to my profile", current_owner, class: :linkbutton %>
@@ -21,9 +20,9 @@
 <div class="feedpage">
   <% @posts.reverse.each do |post| %>
     <div class="feedposts">
-      <%= image_tag(post.image_url.to_s) %>
+      <%= link_to (image_tag(post.image_url.to_s)), "/posts/#{post.id}" %>
       <p class="feedcomments">"<%= post.comment %>"</p>
-      <%=link_to "edit post", "/posts/#{post.id}", class: :petpagepostbutton %>
+      <!-- <%=link_to "edit post", "/posts/#{post.id}", class: :petpagepostbutton %> -->
     </div>
   <% end %>
 </div>

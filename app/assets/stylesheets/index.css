@@ -3,14 +3,15 @@
   padding: 0;
   font-family: arial;
   font-size: 12px;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: rgb(200,220,255);
+  background: linear-gradient(rgb(200,220,255), rgb(255,220,220)) no-repeat center center fixed;
 }
 
 .landingpagetitle {
-  width: 35%;
+  width: 42em;
   margin: 0 auto;
 }
 
@@ -27,7 +28,7 @@ body {
 h2 {
   font-size: 2em;
   text-align: center;
-  padding: 1.5em;
+  padding: .5em 0 2em 0;
 }
 
 #landingpagemain {
@@ -38,7 +39,7 @@ h2 {
 }
 
 #landingpagemain img {
-  width: 25%;
+  width: 30em;
 }
 
 div.landingpage {
@@ -51,7 +52,6 @@ div.landingpage {
   padding: 1em 2em;
   font-size: 2em;
   border-radius: 2em;
-  float: right;
   text-align: center;
   text-decoration: none;
   color: black;
@@ -59,17 +59,12 @@ div.landingpage {
   border: none;
 }
 
-.weirdbutton {
-  width: 93.3%;
-}
-
-.logoutbutton {
-  height: 1.2em;
+.logoutbutton, .linkbutton {
   float: right;
 }
 
-.petpagepostbutton {
-  float: none;
+.weirdbutton {
+  width: 93%;
 }
 
 .profileheader .linkbutton, .weirdbutton {
@@ -90,13 +85,13 @@ div.landingpage {
   padding: .6em 1em;
   border: none;
   font-size: 1.7em;
-  margin: .5em;
+  margin: .5em auto;
   width: 20em;
-  border-radius: .2em;
+  border-radius: .25em;
 }
 
 .formsubmit {
-  margin: .1em;
+  margin: 1em;
   padding: 1em 2em;
   border: none;
   font-size: 2em;
@@ -106,7 +101,6 @@ div.landingpage {
 
 .formselect {
   height: 2.3em;
-  width: 22em;
 }
 
 .profilebuttonsright {
@@ -137,10 +131,18 @@ div.landingpage {
   text-align: center;
 }
 
+.ownerpet, .feedposts {
+  display: flex;
+  flex-direction: column;
+}
+
 .ownerpet, .petprofilepic {
-  width: 20em;
   display: inline-block;
   padding: 1em;
+}
+
+.petprofilepic {
+  width: 20em;
 }
 
 .petpage {
@@ -152,15 +154,18 @@ div.landingpage {
 .ownerpet img, .petpage img {
   width: 100%;
   border-radius: 10em;
+  border: 1em solid white;
 }
 
 .postpage {
   width: 30%;
+  border: 1em solid white;
+  background-color: white;
+  margin: 2em;
 }
 
 .postpage img {
   width: 100%;
-  margin: 1em;
 }
 
 .petinfo p {
@@ -178,7 +183,94 @@ div.landingpage {
   padding: .5em;
 }
 
-.feedposts {
+.feedpage {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+}
+
+.feedposts {
+  width: 30%;
+  margin: 1.5%;
+  border: 1em solid white;
+  background-color: white;
+}
+
+.feedposts img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 650px) {
+
+  .landingpagetitle {
+    width: 77%;
+    padding-top: 0;
+  }
+
+  .landingpagetitle img {
+    margin-top: 0;
+  }
+
+  h2 {
+    padding-top: .5em;
+    font-size: 1.7em;
+  }
+
+  #landingpagemain {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  #landingpagemain img {
+    width: 70%;
+    margin-bottom: 1em;
+  }
+
+  div.landingpage {
+    flex-direction: row;
+  }
+
+  .linkbutton, .logoutbutton, .petpagepostbutton, .weirdbutton {
+    padding: 1em 2em;
+    font-size: 1.7em;
+    margin: .5em;
+  }
+
+  .smallpagetitle {
+    width: 18em;
+  }
+
+  .allforms h1 {
+    font-size: 2.5em;
+  }
+
+  .forminput, .formsubmit, .formselect {
+    width: 95%;
+  }
+
+  .profiletitles {
+    display: none;
+  }
+
+  .profileheader {
+    flex-direction: column;
+  }
+
+  .logoutbutton, .weirdbutton {
+    width: 95%;
+  }
+
+  .petpage {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feedposts {
+    width: 45%;
+    margin: 2.5%;
+  }
+
+  .feedheader .smallpagetitle img {
+    margin: 1em auto;
+  }
+
 }
