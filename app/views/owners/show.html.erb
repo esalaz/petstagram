@@ -1,5 +1,5 @@
 <div class="profileheader">
-  <%= link_to "logout", logout_path, class: :logoutbutton %>
+  <%= button_to "logout", logout_path, class: :logoutbutton %>
   <div class="profiletitles">
     <div class="smallpagetitle pagetitle"><%=link_to (image_tag("/assets/images/petstagram.png")), home_path %></div>
     <h2>Your Pets</h2>
@@ -14,7 +14,7 @@
 <div class="allownerpets">
   <% @pets.each do |pet| %>
     <div class="ownerpet">
-      <%= image_tag(pet.image_url.to_s)%>
+      <%= link_to (image_tag(pet.image_url.to_s)), "/pets/#{pet.id}"%>
       <h2><%=pet.name%></h2>
       <%=link_to "edit pet", "/pets/#{pet.id}", class: :petpagepostbutton %>
   </div>

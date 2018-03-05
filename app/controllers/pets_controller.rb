@@ -28,7 +28,6 @@ class PetsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
     @pet = Pet.find(params[:id])
     @pet.destroy
     redirect_to current_owner
