@@ -46,17 +46,24 @@ div.landingpage {
   flex-direction: column;
 }
 
-button, .rubybuttons {
+.linkbutton, .logoutbutton {
   margin: 1em;
   padding: 1em 2em;
-  border: none;
   font-size: 2em;
   border-radius: 2em;
   float: right;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  background-color: white;
 }
 
-.landingpagemainbutton {
-  margin: 1.5em 0 1.5em 3em;
+.logoutbutton {
+  height: 1.2em;
+}
+
+.profileheader .linkbutton {
+  margin: .5em;
 }
 
 .allforms {
@@ -79,7 +86,7 @@ button, .rubybuttons {
 }
 
 .formsubmit {
-  margin: 1em;
+  margin: .1em;
   padding: 1em 2em;
   border: none;
   font-size: 2em;
@@ -144,10 +151,4 @@ p {
   font-size: 1.5em;
   text-align: center;
   padding-top: .3em
-}
-
-.feedbutton {
-  text-decoration: none;
-  font-size: 1.2em;
-  color: black;
 }
