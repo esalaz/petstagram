@@ -1,9 +1,9 @@
 <div class='feedheader'>
   <%if current_owner == nil %>
-    <button class="loginbuttonclick">Login</button>
-    <button class="signupbuttonclick">Signup</button>
+    <%= link_to "login", new_session_path, class: :linkbutton %>
+    <%= link_to "signup", new_owner_path, class: :linkbutton %>
   <%else%>
-    <button><%= link_to "profile", current_owner, class: :feedbutton %></button>
+    <%= link_to "profile", current_owner, class: :linkbutton %>
   <% end %>
   <div class="smallpagetitle pagetitle"><%=image_tag("/assets/images/petstagram.png") %></div>
 </div>
