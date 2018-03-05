@@ -14,9 +14,9 @@
 <div class="allownerpets">
   <% @pets.each do |pet| %>
     <div class="ownerpet">
-      <%= link_to (image_tag(pet.image_url.to_s)), "/pets/#{pet.id}"%>
+      <div><%= link_to (image_tag(pet.image_url.to_s)), "/pets/#{pet.id}", class: :petprofilepic %></div>
       <h2><%=pet.name%></h2>
-      <%=link_to "edit pet", "/pets/#{pet.id}", class: :petpagepostbutton %>
+      <div><%=link_to "edit pet", "/pets/#{pet.id}", class: :petpagepostbutton %></div>
   </div>
   <%end%>
 </div>

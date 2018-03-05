@@ -20,9 +20,9 @@
 <div class="feedpage">
   <% @posts.reverse.each do |post| %>
     <div class="feedposts">
-      <%= image_tag(post.image_url.to_s) %>
+      <%= link_to (image_tag(post.image_url.to_s)), "/posts/#{post.id}" %>
       <p class="feedcomments">"<%= post.comment %>"</p>
-      <%=link_to "edit post", "/posts/#{post.id}", class: :petpagepostbutton %>
+      <!-- <%=link_to "edit post", "/posts/#{post.id}", class: :petpagepostbutton %> -->
     </div>
   <% end %>
 </div>
