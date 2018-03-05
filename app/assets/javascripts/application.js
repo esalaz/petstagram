@@ -13,5 +13,4 @@
 //= require jquery-1.7.1.js
 //= require rails-ujs
 //= require turbolinks
-//= require buttons
 //= require_tree .

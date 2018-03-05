@@ -1,4 +1,5 @@
-<div class="smallpagetitle pagetitle"><%=image_tag("/assets/images/petstagram.png") %></div>
+<div class="smallpagetitle pagetitle"><%=link_to (image_tag("/assets/images/petstagram.png")), home_path %></div>
+
 <div class="allforms">
   <h1>Create A Profile</h1>
   <%= form_with model: @owner do |form| %>
