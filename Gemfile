@@ -32,6 +32,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'carrierwave'
 
+gem 'carrierwave-aws'
+
 gem 'fog'
 
 gem 'figaro'
