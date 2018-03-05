@@ -27,7 +27,7 @@ body {
 h2 {
   font-size: 2em;
   text-align: center;
-  padding: 1em;
+  padding: 1.5em;
 }
 
 #landingpagemain {
@@ -46,7 +46,7 @@ div.landingpage {
   flex-direction: column;
 }
 
-.linkbutton, .logoutbutton {
+.linkbutton, .logoutbutton, .petpagepostbutton, .weirdbutton {
   margin: 1em;
   padding: 1em 2em;
   font-size: 2em;
@@ -56,13 +56,23 @@ div.landingpage {
   text-decoration: none;
   color: black;
   background-color: white;
+  border: none;
+}
+
+.weirdbutton {
+  width: 93.3%;
 }
 
 .logoutbutton {
   height: 1.2em;
+  float: right;
 }
 
-.profileheader .linkbutton {
+.petpagepostbutton {
+  float: none;
+}
+
+.profileheader .linkbutton, .weirdbutton {
   margin: .5em;
 }
 
@@ -104,11 +114,6 @@ div.landingpage {
   flex-direction: column;
 }
 
-.profileheader .rubybuttons {
-  width: 8em;
-  float: left;
-}
-
 .profileheader {
   display: flex;
   justify-content: space-between;
@@ -121,7 +126,7 @@ div.landingpage {
 
 .profileheader h2 {
   font-size: 5em;
-  padding-top: 2em;
+  padding: 1.5em 0 0 0;
 }
 
 .profilebuttonsright button {
@@ -132,23 +137,48 @@ div.landingpage {
   text-align: center;
 }
 
-.ownerpet {
+.ownerpet, .petprofilepic {
   width: 20em;
   display: inline-block;
   padding: 1em;
 }
 
-.ownerpet img {
+.petpage {
+  display: flex;
+  justify-content: center;
+  margin: 3em;
+}
+
+.ownerpet img, .petpage img {
   width: 100%;
   border-radius: 10em;
+}
+
+.postpage {
+  width: 30%;
+}
+
+.postpage img {
+  width: 100%;
+  margin: 1em;
+}
+
+.petinfo p {
+  margin: 1em;
+  font-size: 2em;
 }
 
 .feedheader {
   height: 15em;
 }
 
-p {
+.feedcomments {
   font-size: 1.5em;
   text-align: center;
-  padding-top: .3em
+  padding: .5em;
+}
+
+.feedposts {
+  display: flex;
+  flex-direction: column;
 }

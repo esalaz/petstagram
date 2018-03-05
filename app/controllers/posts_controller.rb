@@ -23,6 +23,24 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def edit
+    @post = Post.find(params[:id])
+    @pets = Pet.where(owner_id: current_owner.id)
+    @pet_selector = @pets.each.map { |pet|[pet.name, pet.id] }
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    @post.update_attributes(post_params)
+    redirect_to post_path(@post)
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to current_owner
+  end
+
   private
 
   def post_params

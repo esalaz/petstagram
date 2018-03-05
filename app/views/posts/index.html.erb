@@ -5,14 +5,14 @@
   <%else%>
     <%= link_to "profile", current_owner, class: :linkbutton %>
   <% end %>
-  <div class="smallpagetitle pagetitle"><%=image_tag("/assets/images/petstagram.png") %></div>
+  <div class="smallpagetitle pagetitle"><%=link_to (image_tag("/assets/images/petstagram.png")), home_path %></div>
 </div>
 
 <div class="feedpage">
   <% @posts.reverse.each do |post| %>
     <div class="feedposts">
       <%= image_tag(post.image_url.to_s) %>
-      <p>"<%= post.comment %>"</p>
+      <p class="feedcomments">"<%= post.comment %>"</p>
     </div>
   <% end %>
 </div>

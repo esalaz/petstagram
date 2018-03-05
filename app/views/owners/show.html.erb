@@ -1,7 +1,7 @@
 <div class="profileheader">
   <%= link_to "logout", logout_path, class: :logoutbutton %>
   <div class="profiletitles">
-    <div class="smallpagetitle pagetitle"><%=image_tag("/assets/images/petstagram.png") %></div>
+    <div class="smallpagetitle pagetitle"><%=link_to (image_tag("/assets/images/petstagram.png")), home_path %></div>
     <h2>Your Pets</h2>
   </div>
   <div class="profilebuttonsright">
@@ -16,6 +16,7 @@
     <div class="ownerpet">
       <%= image_tag(pet.image_url.to_s)%>
       <h2><%=pet.name%></h2>
+      <%=link_to "edit pet", "/pets/#{pet.id}", class: :petpagepostbutton %>
   </div>
   <%end%>
 </div>
