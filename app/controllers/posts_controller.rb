@@ -12,11 +12,9 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create(post_params)
-    if @post.save
-      redirect_to feed_path
-    else
-      redirect_to home_path
-    end
+    @pet = @post.pet_id
+    @post.save
+    redirect_to "/pets/#{@pet}"
   end
 
   def show
@@ -37,8 +35,9 @@ class PostsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
+    @pet = @post.pet_id
     @post.destroy
-    redirect_to current_owner
+    redirect_to "/pets/#{@pet}"
   end
 
   private
