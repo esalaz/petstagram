@@ -159,7 +159,7 @@ div.landingpage {
 
 .postpage {
   width: 30%;
-  border: 1,5em solid white;
+  border: 1.5em solid white;
   background-color: white;
   margin: 2em;
 }
@@ -271,6 +271,10 @@ div.landingpage {
 
   .feedheader .smallpagetitle img {
     margin: 1em auto;
+  }
+
+  .postpage, .feedposts {
+    border: .8em solid white;
   }
 
 }
