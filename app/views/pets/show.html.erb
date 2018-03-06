@@ -11,9 +11,13 @@
     </div>
   </div>
   <div class="profilebuttonsright">
+    <%= link_to "go to feed", feed_path, class: :linkbutton %>
+    <%=link_to "return to my profile", current_owner, class: :linkbutton %>
+  </div>
+  <div class="profilebuttonsright">
     <%=button_to "delete pet", @pet, method: :delete, class: :weirdbutton %>
     <%=link_to "edit pet", edit_pet_path, class: :linkbutton %>
-    <%=link_to "return to my profile", current_owner, class: :linkbutton %>
+    <%= link_to "post a pic", new_post_path, class: :linkbutton %>
   </div>
 </div>
 

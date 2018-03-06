@@ -159,7 +159,7 @@ div.landingpage {
 
 .postpage {
   width: 30%;
-  border: 1em solid white;
+  border: 1,5em solid white;
   background-color: white;
   margin: 2em;
 }
@@ -191,7 +191,7 @@ div.landingpage {
 .feedposts {
   width: 30%;
   margin: 1.5%;
-  border: 1em solid white;
+  border: 1.5em solid white;
   background-color: white;
 }
 
@@ -199,7 +199,7 @@ div.landingpage {
   width: 100%;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 850px) {
 
   .landingpagetitle {
     width: 77%;
