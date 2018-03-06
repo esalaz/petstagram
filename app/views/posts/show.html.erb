@@ -1,2 +1,7 @@
-<%= image_tag(@post.image_url.to_s) %>
-<%= @post.comment %>
+<div class="smallpagetitle pagetitle"><%=link_to (image_tag("/assets/images/petstagram.png")), home_path %></div>
+<%=button_to "delete post", @post, method: :delete, class: :linkbutton %>
+<%=link_to "edit post", edit_post_path, class: :linkbutton %>
+<div class="postpage">
+  <%= image_tag(@post.image_url.to_s) %>
+  <p class="feedcomments">"<%=@post.comment%>"</p>
+</div>

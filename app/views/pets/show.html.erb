@@ -1,4 +1,32 @@
-<div>
-  <%= @pet.name%>
-  <%= image_tag(@pet.image_url.to_s)%>
+<div class="profileheader">
+  <div class="petpage">
+    <div class="petprofilepic">
+      <%= image_tag(@pet.image_url.to_s)%>
+    </div>
+    <div class="petinfo">
+      <p>Name: <%= @pet.name%> <br></p>
+      <p>Type: <%= @pet.species%><br></p>
+      <p>Breed: <%= @pet.breed%><br></p>
+      <p>Favorite Thing: <%= @pet.favorite_thing%></p>
+    </div>
+  </div>
+  <div class="profilebuttonsright">
+    <%= link_to "go to feed", feed_path, class: :linkbutton %>
+    <%=link_to "return to my profile", current_owner, class: :linkbutton %>
+  </div>
+  <div class="profilebuttonsright">
+    <%=button_to "delete pet", @pet, method: :delete, class: :weirdbutton %>
+    <%=link_to "edit pet", edit_pet_path, class: :linkbutton %>
+    <%= link_to "post a pic", new_post_path, class: :linkbutton %>
+  </div>
+</div>
+
+<div class="feedpage">
+  <% @posts.reverse.each do |post| %>
+    <div class="feedposts">
+      <%= link_to (image_tag(post.image_url.to_s)), "/posts/#{post.id}" %>
+      <p class="feedcomments">"<%= post.comment %>"</p>
+      <!-- <%=link_to "edit post", "/posts/#{post.id}", class: :petpagepostbutton %> -->
+    </div>
+  <% end %>
 </div>

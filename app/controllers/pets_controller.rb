@@ -14,6 +14,23 @@ class PetsController < ApplicationController
 
   def show
     @pet = Pet.find(params[:id])
+    @posts = Post.where(pet_id: @pet.id)
+  end
+
+  def edit
+    @pet = Pet.find(params[:id])
+  end
+
+  def update
+    @pet = Pet.find(params[:id])
+    @pet.update_attributes(pet_params)
+    redirect_to pet_path(@pet)
+  end
+
+  def destroy
+    @pet = Pet.find(params[:id])
+    @pet.destroy
+    redirect_to current_owner
   end
 
   private

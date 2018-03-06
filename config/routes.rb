@@ -15,10 +15,16 @@ Rails.application.routes.draw do
   get '/pets/new', to: 'pets#new', as: 'new_pet'
   post '/pets', to: 'pets#create'
   get '/pets/:id', to: 'pets#show', as: 'pet'
+  get '/pets/:id/edit', to: 'pets#edit', as: 'edit_pet'
+  patch '/pets/:id', to: 'pets#update'
+  delete '/pets/:id', to: 'pets#destroy'
 
   get '/posts', to: 'posts#index', as: 'feed'
   get '/posts/new', to: 'posts#new', as: 'new_post'
   post '/posts', to: 'posts#create'
   get '/posts/:id', to: 'posts#show', as: 'post'
+  get '/posts/:id/edit', to: 'posts#edit', as: 'edit_post'
+  patch '/posts/:id', to: 'posts#update'
+  delete '/posts/:id', to: 'posts#destroy'
 
 end
